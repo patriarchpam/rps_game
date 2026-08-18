@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+<body>
+  <main class="game-container">
+    <!-- Header -->
+    <header class="game-header">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Rock Paper Scissors">
+      </div>
+      <div class="score-box">
+        <span class="score-label">SCORE</span>
+        <span class="score-value" id="score">0</span>
+      </div>
+      <button class="mode-toggle" id="modeToggle" aria-label="Toggle to bonus mode">
+        BONUS
+      </button>
+    </header>
+
+    <!-- Game Area -->
+    <div class="game-area">
+      <!-- Step 1: Choice Selection -->
+      <div class="step step-1" id="step1">
+        <div class="choices-container" id="choicesContainer">
+          <!-- Choices will be populated by JS -->
+        </div>
+      </div>
+
+      <!-- Step 2-3: Game in Progress & Results -->
+      <div class="step step-results hidden" id="stepResults">
+        <div class="results-container">
+          <div class="result-column">
+            <p class="result-label">YOU PICKED</p>
+            <div class="choice-display" id="playerChoice"></div>
+          </div>
+
+          <div class="result-middle" id="resultMiddle">
+            <!-- Result text will appear here -->
+          </div>
+
+          <div class="result-column">
+            <p class="result-label">THE HOUSE PICKED</p>
+            <div class="choice-display" id="houseChoice"></div>
+          </div>
+        </div>
+
+        <button class="play-again-btn" id="playAgainBtn">PLAY AGAIN</button>
+      </div>
+    </div>
+
+    <!-- Rules Button -->
+    <button class="rules-btn" id="rulesBtn" aria-label="Show rules">RULES</button>
+
+    <!-- Rules Modal -->
+    <div class="modal" id="rulesModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>RULES</h2>
+          <button class="modal-close" id="closeModal" aria-label="Close rules">
+            <img src="./images/icon-close.svg" alt="">
+          </button>
+        </div>
+        <div class="modal-body">
+          <img id="rulesImage" src="./images/image-rules.svg" alt="Game rules">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+   <a href="#">Game byPatriarch</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
